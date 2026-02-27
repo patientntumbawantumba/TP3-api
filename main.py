@@ -8,12 +8,12 @@ from database import engine, SessionLocal
 import os
 
 PORT = int(os.environ.get("PORT", 8000))
-uvicorn.run(app, host="0.0.0.0", port=PORT)
+#uvicorn.run(app, host="0.0.0.0", port=PORT)
 
 
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Marketplace API")
+app = FastAPI(title="TP3 API")
 
 # Dependency pour connexion DB
 def get_db():
